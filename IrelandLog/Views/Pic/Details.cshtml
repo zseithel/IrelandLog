@@ -1,0 +1,22 @@
+﻿@model Pic
+
+<h3 class="my-5">
+    @Model.PicName
+</h3>
+
+<div class="row gx-5">
+    <img alt="@Model.PicName" src="~/@Model.ImageUrl" class="img-fluid col-5" />
+    <div class="col-7">
+        <h4>@Model.ShortDescription</h4>
+        <p>@Model.LongDescription</p>
+        <!--<h3 class="pull-right"></h3> -->
+        <div class="addToCart">
+            <p class="button">
+               <a class="btn btn-secondary" 
+                   asp-controller="ShoppingCart" 
+                   asp-action="AddToShoppingCart"
+                   asp-route-picId="@Model.PicId"> + Add to cart</a>
+            </p>
+        </div>
+    </div>
+</div>

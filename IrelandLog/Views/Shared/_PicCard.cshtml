@@ -1,0 +1,17 @@
+﻿@model Pic
+
+<div class="col">
+    <div class="card pic-card">
+        <img src="~/@Model.ThumbnailUrl" class="card-img-top" alt="@Model.PicName">
+        <div class="card-body pic-button">
+            <div class="d-flex justify-content-between mt-2">
+                <h2 class="text-start">
+                    <a asp-controller="Pic"
+                        asp-action="Details"
+                        asp-route-id="@Model.PicId"
+                        class="pic-link">@Model.PicName</a>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>

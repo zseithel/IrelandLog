@@ -1,0 +1,24 @@
+﻿@model HomeViewModel
+
+<partial name="_Carousel"></partial>
+
+<div class="text-center">
+    <img src="~/Content/Images/Logo.png" class="logo-mark mx-auto" />
+    <h1>Log of my trip to Ireland</h1>
+    <h5>A visual journal of my trip through Ireland</h5>
+    <div class="row pics-of-the-week">
+        <p class="button">
+            <a class="btn btn-primary"
+            asp-controller="Pic"
+            asp-action="List"
+            >View the Gallery</a>
+        </p>
+        <p class="button">
+            <a class="btn btn-secondary"
+            asp-controller="Pic"
+            asp-action="Details"
+            asp-route-picId="0"
+            >I'm feeling lucky</a>
+        </p>
+    </div>
+</div>

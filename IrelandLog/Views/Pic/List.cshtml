@@ -1,0 +1,10 @@
+﻿@model PicListViewModel
+
+<h1>@Model.CurrentCatgegory</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @foreach(var pic in Model.Pics)
+    {
+        <partial name="_PicCard" model="pic"/>
+    }
+</div>
